@@ -5,7 +5,7 @@
  * Return: 1
  */	
 
-int putcha(char c)
+int my_putcha(char c)
 {
 	return (write(1, &c, 1));
 }

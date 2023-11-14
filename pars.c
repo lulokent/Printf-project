@@ -8,12 +8,13 @@
 int _printf(const char *format, ...)
 {
 	int i, count = 0;
+	char *str;
 
 	va_list args;
 
 	va_start(args, format);
 
-	for (i = 0; format(i) != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
 		{
@@ -26,9 +27,8 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i + 1] == 's')
 		{
-			s_count = putss(va_arg(args, char *));
-			i++;
-			count += (s_count - 1);
+			str = putss(va_arg(args, char *);
+			str++;
 		}
 		else if (format[i + 1] == '%')
 		{
