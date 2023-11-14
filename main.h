@@ -7,5 +7,7 @@
 #include <stdlib.h>
 
 int _printf(const char *format, ...);
+int my_putcha(char c);
+int putss(char *c);
 
 #endif
